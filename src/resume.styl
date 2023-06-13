@@ -1,0 +1,453 @@
+vars = {}
+var(name)
+  key = unquote(name)
+  val = vars[key] = lookup(name)
+  // return s('var(%s, %s)', key, val)
+  return val // PDF doesn't understand CSS custom props
+
+--primary-color             = hsla(210, 100%, 50%, 1)
+--primary-color-faint       = hsla(--primary-color, 50%)
+--primary-color-dark        = darken(--primary-color, 10%)
+--primary-color-dark-faint  = hsla(--primary-color-dark, 70%)
+--primary-color-light       = hsla(210, 100%, 75%, 1)
+--primary-color-light-faint = hsla(--primary-color-light, 30%)
+--body-color                = desaturate(--primary-color-dark, 95%)
+
+html
+  @media not print
+    font-size 12px
+  @media print
+    font-size 11px
+
+body
+  color var('--body-color')
+  display flex
+  font-family 'Source Sans Pro', -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'
+  font-size 1rem
+  font-weight 100
+  flex-direction column
+  justify-content space-between
+  margin 0
+  min-height 100vh
+
+  @media not print
+    > *:first-child
+      margin-top 3rem
+    > *:last-child
+      margin-bottom 3rem
+
+$anchor
+  border-left 0 solid
+  border-right 0 solid
+  border-top 0 solid
+  border-bottom 1px solid hsla(var('--primary-color'), 0.25)
+  font-weight 400
+  text-decoration none
+  &, &:visited
+    color var('--primary-color')
+  &:hover
+    border-color var('--primary-color-dark')
+    color var('--primary-color-dark')
+
+a
+  @extends $anchor
+
+ul
+  list-style-type " · "
+  list-style-position inside
+  padding-left .25rem
+  margin-top .5rem
+  margin-bottom .5rem
+
+.body
+  &-main
+    flex 1
+
+  &-header,
+  &-main
+    box-sizing border-box
+    padding-left 1rem
+    padding-right 1rem
+
+  &-inner
+    clear both
+    display block
+    margin-top 0
+    margin-bottom 1rem
+    margin-left auto
+    margin-right auto
+
+    @media not print
+      max-width 50rem
+    @media print
+      max-width 55rem
+
+  &-header
+
+    &-left
+      float left
+
+    &-left,
+    &-right
+      display inline-block
+      margin-top 2rem
+      margin-bottom 1rem
+      width 50%
+
+    &-right
+      float right
+
+      &-center
+      &-left
+      &-right
+        display inline-block
+        float right
+
+      &-center
+        margin-left .5rem
+
+      &-left
+        text-align right
+
+      @media not print
+        &-right
+          border 1px solid var('--primary-color')
+          background-color hsla(var('--primary-color'), 0.9)
+          color white!important
+          font-size 1.5rem
+          margin-left .5rem
+          padding 1px .25rem
+          text-align right
+          &:hover
+            border-color var('--primary-color-dark')
+            background-color var('--primary-color-dark')
+
+      @media print
+        &-right
+          display none
+
+    &-phone,
+    &-email,
+    &-social
+      font-size x-small
+
+    &-heading
+      color var('--primary-color')
+      margin-top 0
+      margin-bottom 0
+      letter-spacing -.5px
+      line-height .75
+
+
+.info-brief
+  font-size 1.25rem
+  margin-top 0
+  margin-bottom 0
+  margin-left auto
+  margin-right auto
+  padding-top 2rem
+  padding-bottom 1rem
+
+h1, h2, h3, h4, h5, h6,
+b, strong
+  cursor default
+
+h1
+  font-size 2.5rem
+  font-weight 100
+
+$normal-text
+  font-size 1rem
+  font-weight 200
+  margin 0
+
+h2, h3, h4, h5, h6
+  font-size 1rem
+
+.toc
+  &-item
+    box-sizing border-box
+
+    &-level
+      for n in 1 2 3 4 5 6
+        &{n}
+          padding-left s('%srem', n - 1)
+          if n >= 3
+            display none
+
+// @media print
+//   .section-toc
+//   .section-toc-header
+//     display none
+
+.section
+  box-sizing border-box
+  margin-bottom 1rem
+  padding-left 1rem
+  padding-right 1rem
+
+  &-header
+    border-bottom 1px solid #ddd
+    font-size small
+    font-weight 300
+    padding-bottom .5rem
+    text-transform uppercase
+    &:first-letter
+      font-size medium
+
+.employment-history
+  display inline-block
+  width 100%
+
+  &:not(:last-child)
+    margin-bottom 1rem
+
+  &-dates,
+  &-city,
+  &-employer,
+  &-position
+    width 50%
+    float left
+
+  &-dates,
+  &-city
+    display flex
+    justify-content flex-end
+    text-align right
+
+  &-city,
+  &-employer
+    margin-bottom .25rem
+
+  &-dates,
+  &-position
+    font-style italic
+
+  &-employer
+    @extends $normal-text
+    
+    &-name
+    &-link
+      margin-right .5rem
+
+  &-position,
+  &-employer-name
+  &-employer-link
+    @media print
+      font-weight bold
+    @media not print
+      font-weight 600
+
+  &-dates-sep
+    margin-left .25rem
+    margin-right .25rem
+    font-size x-small
+    line-height 1.25rem
+
+  &-summary
+    margin-top .5rem
+    display block
+    float left
+
+  &-postfix
+    font-size 1.25rem
+    text-align center
+
+  &-city-remote
+    margin-right .5rem
+
+  &-subsection
+    &-block,
+    &-name
+      display inline-block
+      clear both
+      width 100%
+
+    &-name
+      margin-bottom 0
+      margin-top .5rem
+      @media print
+        opacity .8
+      @media not print
+        font-weight 400
+
+    &-list,
+    &-block ul
+      margin-top 0
+      clear both
+      display inline-block
+      width 100%
+
+.section-skills
+  padding-left 0
+  padding-right 0
+
+.skills-intro
+  padding-left 1rem
+  padding-right 1rem
+
+.skill
+  box-sizing border-box
+  display inline-block
+  height 1.75rem
+  line-height 1.75rem
+  margin-top -4px
+  padding-left 1rem
+  padding-right 1rem
+  padding-top 1px
+  position relative
+  width 100%
+
+  @media not print
+    border-bottom 1px solid hsla(0, 0%, 0%, 0.05)
+
+  &:nth-child(2n + 1)
+    background-color hsla(0, 0%, 0%, 0.025)
+
+  &-indent
+    for n in 0 1 2 3 4 5
+      &{n}
+        padding-left s('%srem', n + 1)
+
+  &-label
+    @extends $normal-text
+    float left
+
+  &-projects
+    float left
+    position relative
+
+    &-project
+      border-bottom 0
+      padding-top .25rem
+      padding-bottom .25rem
+      padding-left .125rem
+      padding-right .125rem
+      position relative
+      top -2px
+      cursor pointer
+
+      &:first-child
+        padding-left .75rem
+
+      &:last-child
+        padding-right .75rem
+
+      &-text
+        border 1px solid
+        border-radius 2px
+        display inline-block
+        font-size .75rem
+        font-weight 400
+        height 1rem
+        line-height 1rem
+        padding 0 .25rem 1px
+        position relative
+        top -1px
+
+        span
+          font-weight inherit
+
+  @media not print
+    &-projects-project
+      &:hover &-text
+        color white
+        background-color var('--primary-color-dark')
+        border-color var('--primary-color-dark')
+
+    &-score,
+    &-label
+      filter grayscale(1) brightness(1.1)
+      margin-top -1px
+
+    &-score
+      border-color hsla(210, 0%, 70%, 1)
+
+    &:hover &-score
+    &:hover &-label
+    &:hover &-projects
+      filter grayscale(0)
+
+    &:hover &-label
+    &:hover &-score-disabled
+      color hsla(0, 0%, 10%, 1)
+
+    &:hover &-score-enabled
+      color hsla(210, 100%, 10%, 1)
+
+    &:hover
+      background-color hsla(var('--primary-color-light'), 0.2)
+      box-shadow inset 0px 1px 0px rgba(0, 0, 0, 0.0125)
+
+    &:hover &-projects-project:not(:hover) &-projects-project-text
+    &:target &-projects-project:not(:hover) &-projects-project-text
+      background-color white
+
+    &:target &-label
+    &:target &-score-block
+      color white
+
+    &:target
+      background-color hsla(var('--primary-color'), 0.5)
+
+    &:target:hover
+      background-color hsla(var('--primary-color'), 0.7)
+
+  &-score
+    cursor default
+    float right
+    height 1rem
+    width 5rem
+    -webkit-user-select none
+    -moz-user-select none
+
+    &-block
+      display inline-block
+      font-size 1rem
+      height 1rem
+      line-height 1rem
+      text-align center
+      width 1rem
+
+      &-enabled
+        color var('--primary-color')
+
+      &-disabled
+        color var('--primary-color-faint')
+
+.recognition
+  clear both
+  display inline-block
+  width 100%
+
+  &-title
+    @extends $normal-text
+    display inline-block
+    float left
+    width 50%
+
+  &-event
+    display inline-block
+    float right
+    margin-right .5rem
+    font-style italic
+    width 40%
+
+  &-date
+    display inline-block
+    float right
+
+.project
+  display inline-block
+  float left
+  width 50%
+
+  &:not(:last-child)
+    margin-bottom 1rem
+
+:target
+  background-color hsla(var('--primary-color'), 0.1)
+
+:root
+  for key, val in vars
+    {key} val

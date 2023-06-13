@@ -1,0 +1,276 @@
+name: Ryan Andersen
+
+meta:
+  format: FRESH@0.6.0
+  version: 0.1.0
+
+info:
+  label: Software Developer
+  description: >
+    Developer who creates tools for the web
+
+  brief: >
+    Developer proficient in software design, architecture, implementation, and management.
+    Years of experience taking products and services from breaking-ground to ribbon cutting.
+    Interested in collaborating with and leading small teams of designers and engineers.
+
+contact:
+  website: http://mndvns.com
+  phone: +1 (816) 216-9581
+  email: rustydustyryan@gmail.com
+
+location:
+  address: 338 E South Temple, Unit 605
+  city: Salt Lake City
+  region: UT
+  code: 84111
+  country: US
+
+social:
+  - label: github
+    network: GitHub
+    user: mndvns
+    url: https://github.com/mndvns
+
+  - label: linkedin
+    network: LinkedIn
+    user: mndvns
+    url: https://www.linkedin.com/in/mndvns
+
+employment:
+  summary: ''
+
+  history:
+    - employer: Simplecast
+      industry: startup, podcasting
+      remote: true
+      url: https://simplecast.com
+      city: New York, NY
+      position: Software Engineer
+      start: 2019-04
+      end: 2020-03
+      summary:
+        - Co-wrote the Elixir framework that now serves as the backbone of the company's API.
+        - Migrated the platform from one cloud provider to another, saving thousands in weekly operating costs.
+        - Created system to safely test all new front or backend features in production.
+
+    - employer: Optiv
+      industry: enterprise, cybersecurity
+      remote: true
+      url: https://www.optiv.com
+      city: Overland Park, KS
+      position: Principal Software Engineer, API Architect
+      start: 2015-11
+      end: 2018-04
+      summary:
+        - Moved the company from a private SOAP API to a public REST API.
+        - Rewrote the client-facing dashboard, dramatically improving usability.
+
+    - employer: QZZR
+      industry: startup, content creation
+      url: https://www.qzzr.com
+      city: Salt Lake City, UT
+      position: Software Engineer
+      start: 2015-02
+      end: 2015-11
+      summary:
+        - Wrote or rewrote each of the company's flagship quiz, poll, and list frontends, which allowed for per-instance customization, faster load times, improved customer satisfaction, and increased sales.
+
+    - employer: OC Tanner
+      industry: enterprise, employee benefits
+      url: https://www.octanner.com
+      city: Salt Lake City, UT
+      position: Front-End Developer
+      start: 2013-08
+      end: 2015-02
+      summary:
+        - Led the front-end team in the rewrite of the company's 8-year-old flagship Java webapp, doubling performance.
+        - Led collaboration with engineers and graphic designers to establish cross-product UI conventions, tools, and resources.
+
+    - employer: Deffenbaugh
+      industry: enterprise, waste management
+      url: https://www.wm.com/location/missouri/deffenbaugh/index.jsp
+      city: Kansas City, KS
+      position: Application Developer
+      start: 2013-01
+      end: 2013-07
+      summary:
+        - Developed internal tool to organize and manage physical materials in real time.
+
+    - employer: VML
+      industry: enterprise, digital ad agency
+      url: https://www.vml.com
+      city: Kansas City, MO
+      position: Interactive Web Developer
+      start: 2012-08
+      end: 2013-01
+      summary:
+        - Redesigned Crocs UI, reducing CSS lines from 20,000 to 400.
+        - Developed and designed Facebook application for Gatorade to manage arbitrary sporting events.
+        - Wrote rich UI application for Wendy's campaign to unveil new menu items.
+
+    - employer: Vancoa
+      industry: startup, web marketing
+      city: Kansas City, MO
+      position: Owner
+      start: 2011-03
+      end: 2012-09
+      summary:
+        - Created blogs, forums, and commercial websites, all using open-source CMS engines, and all handed off to customers for maintenance and occasional support.
+        - Proposed, storyboarded, and animated advertisements and educational videos.
+
+skills:
+  list: []
+
+  sets:
+    - name: Elixir
+      score: 4
+      projects:
+        - mndvns/debug
+        - mndvns/inspex
+      sets:
+        - name: Plug
+          score: 3
+          projects:
+            - exstruct/mazurka
+
+    - name: Node.js
+      score: 5
+      projects:
+        - mndvns/nr
+        - mndvns/lig
+        - mndvns/whatever-format
+      sets:
+        - name: Express
+          score: 5
+          projects:
+            - mndvns/hyper-decorate
+        - name: Koa
+          score: 5
+          projects:
+            - mndvns/koa-resolve-base
+            - mndvns/kickoff
+
+    - name: Web Libraries
+      score: 4
+      projects:
+        - ui-kit/ui-kit
+      sets:
+        - name: React.js
+          score: 5
+          projects:
+            - ui-kit/ui-kit#components
+            - ui-kit/ui-kit#controls
+
+        - name: Angular.js
+          score: 4
+          projects:
+            - hypergroup/ng-hyper
+            - hypergroup/ng-hyper-animate
+
+    - name: Styles
+      score: 5
+      projects:
+        - ui-kit/typography
+        - ui-kit/root
+
+      sets:
+        - name: CSS/LESS/SASS/Stylus
+          score: 5
+          projects:
+            - shoelace-ui
+            - mndvns/stylus-requires
+            - mndvns/rework-replace
+
+        - name: DOM
+          score: 5
+          projects:
+            - ui-kit/classnames
+            - ui-kit/rule-select
+            - mndvns/sheet
+
+        - name: Colors
+          score: 4
+          projects:
+            - css-utils/immutable-color
+            - ui-kit/palette
+
+    - name: Automation
+      score: 2
+      sets:
+        - name: Shell
+          score: 2
+          projects:
+            - mndvns/manage
+
+        - name: CLI
+          score: 3
+          projects:
+            - mndvns/lr
+            - mndvns/here-json
+            - mndvns/term-colors
+
+        - name: Selenium
+          score: 2
+          projects:
+            - mndvns/saucer
+
+    - name: Database
+      score: 3
+      sets:
+        - name: SQL (MySQL/PostgreSQL)
+          score: 3
+
+        - name: MongoDB
+          score: 2
+
+    - name: Configuration
+      score: 3
+      sets:
+        - name: Webpack
+          score: 3
+          projects:
+            - poegroup/poe-ui
+
+        - name: Make
+          score: 4
+          projects:
+            - poegroup/poe-ui
+
+        - name: Environment
+          score: 4
+          projects:
+            - mndvns/envrc
+            - mndvns/.dotfiles
+
+    - name: Platform
+      score: 2
+      sets:
+        - name: AWS (S3, EC2, Lambda)
+          score: 2
+
+        - name: Heroku
+          score: 2
+          projects:
+            - mndvns/mizzen-api
+
+        - name: Extension
+          score: 2
+          projects:
+            - hypergroup/hyper.chrome
+
+        - name: macOS
+          score: 1
+          projects:
+            - mndvns/hyper-caps-lock
+
+recognition:
+  - flavor: award
+    title: Silver ADDY Award
+    event: American Advertising Federation
+    date: 2012
+
+  - flavor: award
+    title: Best Usage of Tumblr API and Best Presentation
+    event: Compute Midwest Hackathon
+    date: 2012

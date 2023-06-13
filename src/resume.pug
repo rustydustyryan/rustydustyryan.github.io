@@ -1,0 +1,139 @@
+doctype html
+
+head
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1')
+
+  title= name + ' – ' + info.label
+  meta(name='author' content=name)
+  meta(name='description' content=info.description.trim())
+
+  link(rel='icon' type='image/png' href='./public/favicon-16x16.png' sizes='16x16')
+  link(rel='icon' type='image/png' href='./public/favicon-32x32.png' sizes='32x32')
+  link(rel='icon' type='image/png' href='./public/favicon-64x64.png' sizes='64x64')
+  link(rel='icon' type='image/png' href='./public/favicon-128x128.png' sizes='128x128')
+  link(rel='icon' type='image/png' href='./public/favicon-192x192.png' sizes='192x192')
+
+  link(rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;0,200;0,300;0,400;0,600;0,700;0,900')
+  // link(rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap')
+  // link(rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap')
+
+  style
+    include:stylus ./resume.styl
+
+body
+  - const properCase = (string) => string.replace(/(^[a-z]|[^a-z])([a-z]*)/, (m, p1, p2) => p1.toUpperCase() + p2)
+  - const formatDate = (string) => (new Date(string)).toGMTString().split(' ').slice(2, 4).join(' ')
+  - const formatLabel = (string) => string.toLowerCase().replace(/[^a-z][^a-z]?/g, '-')
+
+  header.body-header(id='info'): .body-inner
+    div.body-header-left
+      h1.body-header-heading(id='name')
+        span!= name
+    div.body-header-right
+      a.body-header-right-right(href='./Michael_Vanasse_resume.pdf' target='_blank') pdf
+      div.body-header-right-center
+        div.body-header-social: a(href=social[0].url target='_blank')= `${social[0].label}.com/${social[0].user}`
+        div.body-header-social: a(href=social[1].url target='_blank')= `${social[1].label}.com/${social[1].user}`
+      div.body-header-right-left
+        div.body-header-phone= contact.phone
+        div.body-header-email: a(href='mailto:' + contact.email)= contact.email
+
+  main.body-main: .body-inner
+
+    p.info-brief(id='info.brief')!= info.brief
+
+    mixin section(id, label)
+      - label = label || properCase(id)
+      h2(class=`section-header section-${id}-header`)= label
+      section(class=`section section-${id}` id=id)
+        block
+
+    //- +section('toc', 'Contents')
+
+    +section('employment', 'Experience')
+      mixin employment-history(props)
+        - const label = formatLabel(props.employer)
+        div.employment-history(id=`experience.${label}`)
+          h3.employment-history-employer
+            if props.url
+              a.employment-history-employer-link(href=props.url target='_blank')= props.employer
+            else
+              span.employment-history-employer-name= props.employer
+            i.employment-history-employer-industry= '(' + props.industry + ')'
+          span.employment-history-city
+            if props.remote
+              span.employment-history-city-remote (Remote)
+            span.employment-history-city-name= props.city
+          span.employment-history-position= props.position
+          span.employment-history-dates
+            span.employment-history-dates-start= formatDate(props.start)
+            span.employment-history-dates-sep= ' – '
+            span.employment-history-dates-end= formatDate(props.end)
+          ul.employment-history-summary
+            each item in (props.summary || [])
+              li.employment-history-summary-item!= item.replace(/ href=/g, ' target="_blank" href=')
+
+      if employment.summary
+        p.employment-history-summary
+      each h in employment.history
+        +employment-history(h)
+
+      p.employment-history-postfix References are available upon request.
+
+    +section('skills')
+      mixin skill(props, levels)
+        - const indent = props.indent || 0
+        - const sets = props.sets || []
+        - const label = formatLabel(props.name)
+        - const score = props.score || 0
+        - const projects = props.projects || []
+        - const id = levels.concat(label).join('.')
+        div.skill(class=`skill-indent${indent}` id=id)
+          if indent === 0
+            h3.skill-label= props.name
+          else if indent === 1
+            h4.skill-label= props.name
+          else if indent === 2
+            h5.skill-label= props.name
+          else if indent === 3
+            h6.skill-label= props.name
+          div.skill-projects
+            each p in projects
+              - const [path, hash] = p.split('#')
+              - const px = path.split('/')
+              - const linkpx = hash ? path.split('/').splice(2, 0, `tree/master/${hash}`) : px
+              - const link = `https://github.com/${px.join('/')}`
+              - const text = px.join('<span>/</span>')
+              a.skill-projects-project(href=link target='_blank')
+                span.skill-projects-project-text!= hash ? `${text}<span>/</span>${hash}` : text
+          div.skill-score
+            each n in [1, 2, 3, 4, 5].reverse()
+              if n > score
+                span.skill-score-block.skill-score-block-disabled ・
+              else
+                span.skill-score-block.skill-score-block-enabled ◍
+        if sets.length
+          each s in sets
+            - s.indent = indent + 1
+            +skill(s, levels.concat(label))
+
+      p.skills-intro.
+        The leftmost label in a row signifies some area of expertise, followed by links to public projects that showcase it.
+        On the right end of each row are some dots and bubbles that represent my comfort level in the domain—the more bubbles,
+        the more familiar it is.
+
+      each s in skills.sets
+        +skill(s, ['skills'])
+
+    +section('recognition', 'Awards')
+      mixin recognition(props)
+        div.recognition
+          h3.recognition-title= props.title
+          span.recognition-date= props.date
+          span.recognition-event= `(${props.event})`
+      for r in recognition
+        +recognition(r)
+
+  //- script
+  //-   include:babel ./resume.js
