@@ -10,267 +10,164 @@ info:
     Developer who creates tools for the web
 
   brief: >
-    Developer proficient in software design, architecture, implementation, and management.
-    Years of experience taking products and services from breaking-ground to ribbon cutting.
-    Interested in collaborating with and leading small teams of designers and engineers.
+    Junior Software Developer experienced in website and application design, with a strong understanding of art and design fundementals, and a knack for solving unique problems with creative solutions. Interested in working alone or in a team to develop aesthetically pleasing and highly functional projects.
 
 contact:
-  website: http://mndvns.com
-  phone: +1 (816) 216-9581
+  website: http://ryandesign.co
+  phone: +1 (801) 898-9648
   email: rustydustyryan@gmail.com
 
 location:
-  address: 338 E South Temple, Unit 605
-  city: Salt Lake City
+  address: 468 W 400 N, Apt A
+  city: St George
   region: UT
-  code: 84111
+  code: 84770
   country: US
 
 social:
   - label: github
     network: GitHub
-    user: mndvns
-    url: https://github.com/mndvns
+    user: rustydustyryan
+    url: https://github.com/rustydustyryan
 
   - label: linkedin
     network: LinkedIn
-    user: mndvns
-    url: https://www.linkedin.com/in/mndvns
+    user: Ryan Andersen
+    url: https://www.linkedin.com/in/ryan-andersen-45907b180/
 
 employment:
   summary: ''
 
   history:
-    - employer: Simplecast
-      industry: startup, podcasting
+    - employer: Ryan Andersen Co
+      industry: Software, Design
       remote: true
-      url: https://simplecast.com
-      city: New York, NY
-      position: Software Engineer
-      start: 2019-04
-      end: 2020-03
+      url: https://www.ryandesign.co/
+      city: St George, UT
+      position: Software Developer
+      start: 2022-12
+      end: present
       summary:
-        - Co-wrote the Elixir framework that now serves as the backbone of the company's API.
-        - Migrated the platform from one cloud provider to another, saving thousands in weekly operating costs.
-        - Created system to safely test all new front or backend features in production.
+        - Designed and developed websites and applications for clients.
+        - Created and maintained websites for personal projects.
 
-    - employer: Optiv
-      industry: enterprise, cybersecurity
-      remote: true
-      url: https://www.optiv.com
-      city: Overland Park, KS
-      position: Principal Software Engineer, API Architect
-      start: 2015-11
-      end: 2018-04
+    - employer: Utah Tech University Sears Art Museum
+      industry: art, history, education, social media
+      remote: false
+      url: https://www.searsart.com/
+      city: St George, UT
+      position: Art Director Intern
+      start: 2022-01
+      end: 2023-09
       summary:
-        - Moved the company from a private SOAP API to a public REST API.
-        - Rewrote the client-facing dashboard, dramatically improving usability.
+        - Responsible for handling and cataloging various works of art.
+        - Assisted with setting up and hanging prestigious art shows and assisting featured artists.
+        - Collaborated on the posting of company social media and website content.
 
-    - employer: QZZR
-      industry: startup, content creation
-      url: https://www.qzzr.com
-      city: Salt Lake City, UT
-      position: Software Engineer
-      start: 2015-02
-      end: 2015-11
+    - employer: Caption Call
+      industry: Communication, Technology
+      remote: false
+      url: https://sorenson.com/solutions/captioning/
+      city: St George, UT
+      position: Captioning Agent
+      start: 2020-06
+      end: 2021-12
       summary:
-        - Wrote or rewrote each of the company's flagship quiz, poll, and list frontends, which allowed for per-instance customization, faster load times, improved customer satisfaction, and increased sales.
+        - Transcribed personal conversations from speech to text for hearing disabled persons, requiring the highest possible accuracy of transcription.
+        - Communicated effectively and professionally with mentors and team members through team chat and live calls.
+        - Maintained highest quality performance throughout numerous unannounced quality checks.
 
-    - employer: OC Tanner
-      industry: enterprise, employee benefits
-      url: https://www.octanner.com
-      city: Salt Lake City, UT
-      position: Front-End Developer
+education:
+  summary: ''
+
+  history:
+    - institution: Utah Tech University
+      area: Animation and Entertainment Arts
+      degree: Bachelor of Science
+      start: 2019-08
+      end: 2022-12
+      awards: Graduated Magna Cum Laude
+      certificate: Applied Technology Certificate in 3D Animation
+
+    - institution: Salt Lake Community College
+      area: General Studies/Audio Production
+      degree: Associate of Science
       start: 2013-08
-      end: 2015-02
-      summary:
-        - Led the front-end team in the rewrite of the company's 8-year-old flagship Java webapp, doubling performance.
-        - Led collaboration with engineers and graphic designers to establish cross-product UI conventions, tools, and resources.
-
-    - employer: Deffenbaugh
-      industry: enterprise, waste management
-      url: https://www.wm.com/location/missouri/deffenbaugh/index.jsp
-      city: Kansas City, KS
-      position: Application Developer
-      start: 2013-01
-      end: 2013-07
-      summary:
-        - Developed internal tool to organize and manage physical materials in real time.
-
-    - employer: VML
-      industry: enterprise, digital ad agency
-      url: https://www.vml.com
-      city: Kansas City, MO
-      position: Interactive Web Developer
-      start: 2012-08
-      end: 2013-01
-      summary:
-        - Redesigned Crocs UI, reducing CSS lines from 20,000 to 400.
-        - Developed and designed Facebook application for Gatorade to manage arbitrary sporting events.
-        - Wrote rich UI application for Wendy's campaign to unveil new menu items.
-
-    - employer: Vancoa
-      industry: startup, web marketing
-      city: Kansas City, MO
-      position: Owner
-      start: 2011-03
-      end: 2012-09
-      summary:
-        - Created blogs, forums, and commercial websites, all using open-source CMS engines, and all handed off to customers for maintenance and occasional support.
-        - Proposed, storyboarded, and animated advertisements and educational videos.
+      end: 2018-12
+      certificate: Certificate of Proficiency in Audio Production
 
 skills:
   list: []
 
   sets:
-    - name: Elixir
-      score: 4
-      projects:
-        - mndvns/debug
-        - mndvns/inspex
-      sets:
-        - name: Plug
-          score: 3
-          projects:
-            - exstruct/mazurka
-
-    - name: Node.js
-      score: 5
-      projects:
-        - mndvns/nr
-        - mndvns/lig
-        - mndvns/whatever-format
-      sets:
-        - name: Express
-          score: 5
-          projects:
-            - mndvns/hyper-decorate
-        - name: Koa
-          score: 5
-          projects:
-            - mndvns/koa-resolve-base
-            - mndvns/kickoff
-
-    - name: Web Libraries
-      score: 4
-      projects:
-        - ui-kit/ui-kit
-      sets:
-        - name: React.js
-          score: 5
-          projects:
-            - ui-kit/ui-kit#components
-            - ui-kit/ui-kit#controls
-
-        - name: Angular.js
-          score: 4
-          projects:
-            - hypergroup/ng-hyper
-            - hypergroup/ng-hyper-animate
-
-    - name: Styles
-      score: 5
-      projects:
-        - ui-kit/typography
-        - ui-kit/root
-
-      sets:
-        - name: CSS/LESS/SASS/Stylus
-          score: 5
-          projects:
-            - shoelace-ui
-            - mndvns/stylus-requires
-            - mndvns/rework-replace
-
-        - name: DOM
-          score: 5
-          projects:
-            - ui-kit/classnames
-            - ui-kit/rule-select
-            - mndvns/sheet
-
-        - name: Colors
-          score: 4
-          projects:
-            - css-utils/immutable-color
-            - ui-kit/palette
-
-    - name: Automation
-      score: 2
-      sets:
-        - name: Shell
-          score: 2
-          projects:
-            - mndvns/manage
-
-        - name: CLI
-          score: 3
-          projects:
-            - mndvns/lr
-            - mndvns/here-json
-            - mndvns/term-colors
-
-        - name: Selenium
-          score: 2
-          projects:
-            - mndvns/saucer
-
-    - name: Database
+    - name: Software
       score: 3
+      projects:
+        - Praxis Counseling
+        - Music Keeps
+        - Ryan Design Co
+        - Ryan Andersen Photography
+        - EdgeLedger
+        - NewsGrid
+        - Hotel BT
+        - Praxis Dropdown Menu
+        - Hamburger Spin Menu
       sets:
-        - name: SQL (MySQL/PostgreSQL)
-          score: 3
-
-        - name: MongoDB
-          score: 2
-
-    - name: Configuration
-      score: 3
-      sets:
-        - name: Webpack
-          score: 3
-          projects:
-            - poegroup/poe-ui
-
-        - name: Make
+        - name: HTML
           score: 4
-          projects:
-            - poegroup/poe-ui
-
-        - name: Environment
+        - name: CSS
           score: 4
-          projects:
-            - mndvns/envrc
-            - mndvns/.dotfiles
-
-    - name: Platform
-      score: 2
-      sets:
-        - name: AWS (S3, EC2, Lambda)
+        - name: JavaScript
           score: 2
-
-        - name: Heroku
-          score: 2
-          projects:
-            - mndvns/mizzen-api
-
-        - name: Extension
-          score: 2
-          projects:
-            - hypergroup/hyper.chrome
-
-        - name: macOS
+        - name: TypeScript
           score: 1
-          projects:
-            - mndvns/hyper-caps-lock
+        - name: Bootstrap
+          score: 3
+        - name: React
+          score: 2
+        - name: Shell (zsh)
+          score: 1
+        - name: Git
+          score: 1
 
-recognition:
-  - flavor: award
-    title: Silver ADDY Award
-    event: American Advertising Federation
-    date: 2012
+    - name: Design, Photo/Video
+      score: 4
+      projects:
+        - https://sportsgeek616.wixsite.com/website-1
+        - Ryan Design Co
+        - Praxis Counseling
+        - Ryan Andersen Photography
+      sets:
+        - name: Photoshop
+          score: 3
+        - name: Illustrator
+          score: 1
+        - name: Lightroom
+          score: 4
+        - name: Premiere Pro
+          score: 4
+        - name: Animate
+          score: 2
+        - name: Blender
+          score: 3
 
-  - flavor: award
-    title: Best Usage of Tumblr API and Best Presentation
-    event: Compute Midwest Hackathon
-    date: 2012
+    - name: Audio
+      score: 4
+      projects:
+        - https://sportsgeek616.wixsite.com/website-1/about-3
+        - https://soundcloud.com/mndbdy
+      sets:
+        - name: Logic Pro
+          score: 5
+        - name: Adobe Audition
+          score: 1
+# recognition:
+#   - flavor: certificate
+#     title: Applied Technology Certificate in 3D Animation
+#     event: Utah Tech University
+#     date: 2023
+
+#   - flavor: certificate
+#     title: Certificate of Proficiency in Audio Production
+#     event: Salt Lake Community College
+#     date: 2018
