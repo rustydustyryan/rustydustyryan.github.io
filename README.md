@@ -1,4 +1,4 @@
-# mndvns.github.io
+# rustydustyryan.github.io
 
 My page
 
@@ -6,6 +6,12 @@ My page
 
 ```
 $ make
+```
+
+## Development
+
+```
+$ make dev
 ```
 
 ## License

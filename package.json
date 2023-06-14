@@ -1,9 +1,9 @@
 {
-  "name": "mndvns.github.io",
+  "name": "rustydustyryan.github.io",
   "private": true,
   "version": "1.0.0",
   "main": "index.js",
-  "author": "Ryan Andersen <rustydustyryan@gmail.com> (http://mndvns.com/)",
+  "author": "Ryan Andersen <rustydustyryan@gmail.com> (http://ryandesign.co/)",
   "dependencies": {
     "chokidar-cli": "^1.2.0",
     "electroshot": "^1.4.0",

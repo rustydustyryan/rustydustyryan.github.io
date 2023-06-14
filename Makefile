@@ -20,7 +20,10 @@ node_modules:
 
 # build tasks
 
-build: node_modules index.html resume.pdf Michael_Vanasse_resume.pdf
+dev:
+	watch 'rm out/resume.html 2>/dev/null; make out/resume.html'
+
+build: node_modules index.html resume.pdf Ryan_Andersen_resume.pdf
 	@printf "  `date -u +'%Y-%m-%d %H:%M:%S'` - building " \
 	&& $(make_and_print_all) \
 	printf ' done\n'
@@ -87,7 +90,7 @@ index.html: out/resume.html
 resume.pdf: out/resume.pdf
 	@cp -f $< $@
 
-Michael_Vanasse_resume.pdf: out/resume.pdf
+Ryan_Andersen_resume.pdf: out/resume.pdf
 	@cp -f $< $@
 
 # utility tasks

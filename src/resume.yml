@@ -78,53 +78,61 @@ employment:
         - Maintained highest quality performance throughout numerous unannounced quality checks.
 
 education:
-  summary: ''
+  - institution: Utah Tech University
+    area: Animation and Entertainment Arts
+    degree: Bachelor of Science
+    start: 2019-08
+    end: 2022-12
+    awards: Graduated Magna Cum Laude
+    certificate: Applied Technology Certificate in 3D Animation
 
-  history:
-    - institution: Utah Tech University
-      area: Animation and Entertainment Arts
-      degree: Bachelor of Science
-      start: 2019-08
-      end: 2022-12
-      awards: Graduated Magna Cum Laude
-      certificate: Applied Technology Certificate in 3D Animation
-
-    - institution: Salt Lake Community College
-      area: General Studies/Audio Production
-      degree: Associate of Science
-      start: 2013-08
-      end: 2018-12
-      certificate: Certificate of Proficiency in Audio Production
+  - institution: Salt Lake Community College
+    area: General Studies/Audio Production
+    degree: Associate of Science
+    start: 2013-08
+    end: 2018-12
+    certificate: Certificate of Proficiency in Audio Production
 
 skills:
   list: []
 
   sets:
     - name: Software
-      score: 3
+      score: 2
       projects:
-        - Praxis Counseling
-        - Music Keeps
-        - Ryan Design Co
-        - Ryan Andersen Photography
-        - EdgeLedger
-        - NewsGrid
-        - Hotel BT
-        - Praxis Dropdown Menu
-        - Hamburger Spin Menu
       sets:
         - name: HTML
           score: 4
+          projects:
+          - title: Praxis Counseling
+            link: praxiscounselingutah.com
+          - title: EdgeLedger
+            link: github.com/rustydustyryan/financial-website
+          - title: NewsGrid
+            link: github.com/rustydustyryan/news-website
+          - title: Hotel BT
+            link: github.com/rustydustyryan/hotel_website
         - name: CSS
           score: 4
-        - name: JavaScript
-          score: 2
-        - name: TypeScript
-          score: 1
+          projects:
+          - title: Dropdown Menu
+            link: github.com/rustydustyryan/Praxis-Dropdown-Menu
+          - title: Hamburger Spin Menu
+            link: github.com/rustydustyryan/hamburger-spin-menu
         - name: Bootstrap
           score: 3
+        - name: JavaScript/TypeScript
+          score: 2
+          projects:
+          - title: Music Keeps
+            link: musickeeps.com
+          - title: Ryan Design Co
+            link: ryandesign.co
         - name: React
           score: 2
+          projects:
+          - title: Ryan Andersen Photography
+            link: ryanimage.com
         - name: Shell (zsh)
           score: 1
         - name: Git
@@ -133,10 +141,14 @@ skills:
     - name: Design, Photo/Video
       score: 4
       projects:
-        - https://sportsgeek616.wixsite.com/website-1
-        - Ryan Design Co
-        - Praxis Counseling
-        - Ryan Andersen Photography
+        - title: Photography
+          link: https://sportsgeek616.wixsite.com/website-1
+        - title: Ryan Design Co
+          link: ryandesign.co
+        - title: Praxis Counseling
+          link: praxiscounselingutah.com
+        - title: Ryan Andersen Photography
+          link: ryanimage.com
       sets:
         - name: Photoshop
           score: 3
@@ -154,13 +166,16 @@ skills:
     - name: Audio
       score: 4
       projects:
-        - https://sportsgeek616.wixsite.com/website-1/about-3
-        - https://soundcloud.com/mndbdy
+        - title: Demos
+          link: sportsgeek616.wixsite.com/website-1/about-3
+        - title: Recordings
+          link: soundcloud.com/mndbdy
       sets:
         - name: Logic Pro
           score: 5
         - name: Adobe Audition
           score: 1
+
 # recognition:
 #   - flavor: certificate
 #     title: Applied Technology Certificate in 3D Animation

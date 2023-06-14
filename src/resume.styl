@@ -195,6 +195,28 @@ h2, h3, h4, h5, h6
     &:first-letter
       font-size medium
 
+.education
+  display inline-block
+  margin-bottom 12px
+  width 100%
+
+  &-institution,
+  &-dates
+    float left
+
+  &-degree
+    width 100%
+
+  &-institution
+    font-weight 600
+    margin 0
+    width 75%
+
+  &-dates
+    font-style italic
+    text-align right
+    width 25%
+
 .employment-history
   display inline-block
   width 100%
@@ -202,12 +224,21 @@ h2, h3, h4, h5, h6
   &:not(:last-child)
     margin-bottom 1rem
 
-  &-dates,
+  &-dates
   &-city,
   &-employer,
   &-position
-    width 50%
     float left
+
+  &-dates,
+  &-position
+    width 50%
+
+  &-employer
+    width 75%
+
+  &-city
+    width 25%
 
   &-dates,
   &-city
@@ -225,7 +256,7 @@ h2, h3, h4, h5, h6
 
   &-employer
     @extends $normal-text
-    
+
     &-name
     &-link
       margin-right .5rem

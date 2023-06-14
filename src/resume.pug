@@ -31,7 +31,7 @@ body
       h1.body-header-heading(id='name')
         span!= name
     div.body-header-right
-      a.body-header-right-right(href='./Michael_Vanasse_resume.pdf' target='_blank') pdf
+      a.body-header-right-right(href='./Ryan_Andersen_resume.pdf' target='_blank') pdf
       div.body-header-right-center
         div.body-header-social: a(href=social[0].url target='_blank')= `${social[0].label}.com/${social[0].user}`
         div.body-header-social: a(href=social[1].url target='_blank')= `${social[1].label}.com/${social[1].user}`
@@ -69,7 +69,10 @@ body
           span.employment-history-dates
             span.employment-history-dates-start= formatDate(props.start)
             span.employment-history-dates-sep= ' – '
-            span.employment-history-dates-end= formatDate(props.end)
+            if props.end === "present"
+              span.employment-history-dates-end= "Present"
+            else
+              span.employment-history-dates-end= formatDate(props.end)
           ul.employment-history-summary
             each item in (props.summary || [])
               li.employment-history-summary-item!= item.replace(/ href=/g, ' target="_blank" href=')
@@ -79,7 +82,22 @@ body
       each h in employment.history
         +employment-history(h)
 
-      p.employment-history-postfix References are available upon request.
+    +section('education')
+      mixin education(props)
+        - const label = formatLabel(props.institution)
+        div.education(id=`education.${label}`)
+          h3.education-institution= props.institution
+          span.education-dates
+            span.education-dates-start= formatDate(props.start)
+            span.education-dates-sep= ' – '
+            span.education-dates-end= formatDate(props.end)
+          span.education-degree= props.degree
+          //- ul.education-summary
+          //-   each item in (props.summary || [])
+          //-     li.education-summary-item!= item.replace(/ href=/g, ' target="_blank" href=')
+
+      each e in education
+        +education(e)
 
     +section('skills')
       mixin skill(props, levels)
@@ -100,13 +118,9 @@ body
             h6.skill-label= props.name
           div.skill-projects
             each p in projects
-              - const [path, hash] = p.split('#')
-              - const px = path.split('/')
-              - const linkpx = hash ? path.split('/').splice(2, 0, `tree/master/${hash}`) : px
-              - const link = `https://github.com/${px.join('/')}`
-              - const text = px.join('<span>/</span>')
+              - const link = `https://${p.link}`
               a.skill-projects-project(href=link target='_blank')
-                span.skill-projects-project-text!= hash ? `${text}<span>/</span>${hash}` : text
+                span.skill-projects-project-text= p.title
           div.skill-score
             each n in [1, 2, 3, 4, 5].reverse()
               if n > score
@@ -126,14 +140,19 @@ body
       each s in skills.sets
         +skill(s, ['skills'])
 
-    +section('recognition', 'Awards')
-      mixin recognition(props)
-        div.recognition
-          h3.recognition-title= props.title
-          span.recognition-date= props.date
-          span.recognition-event= `(${props.event})`
-      for r in recognition
-        +recognition(r)
+    if recognition
+      +section('recognition', 'Awards')
+        mixin recognition(props)
+          div.recognition
+            h3.recognition-title= props.title
+            span.recognition-date= props.date
+            span.recognition-event= `(${props.event})`
+        for r in recognition
+          +recognition(r)
+
+    +section('references', " ")
+      p.employment-history-postfix References are available upon request.
+
 
   //- script
   //-   include:babel ./resume.js
