@@ -142,7 +142,7 @@ skills:
       score: 4
       projects:
         - title: Photography
-          link: https://sportsgeek616.wixsite.com/website-1
+          link: https://sportsgeek616.wixsite.com/website-1/concept-shoot
         - title: Ryan Design Co
           link: ryandesign.co
         - title: Praxis Counseling
@@ -152,6 +152,9 @@ skills:
       sets:
         - name: Photoshop
           score: 3
+          projects:
+            - title: Digital Media
+              link: https://sportsgeek616.wixsite.com/website-1/image-portfolio
         - name: Illustrator
           score: 1
         - name: Lightroom

@@ -33,8 +33,8 @@ body
     div.body-header-right
       a.body-header-right-right(href='./Ryan_Andersen_resume.pdf' target='_blank') pdf
       div.body-header-right-center
-        div.body-header-social: a(href=social[0].url target='_blank')= `${social[0].label}.com/${social[0].user}`
-        div.body-header-social: a(href=social[1].url target='_blank')= `${social[1].label}.com/${social[1].user}`
+        div.body-header-social: a(href=social[0].url target='_blank')= social[0].label
+        div.body-header-social: a(href=social[1].url target='_blank')= social[1].label
       div.body-header-right-left
         div.body-header-phone= contact.phone
         div.body-header-email: a(href='mailto:' + contact.email)= contact.email
@@ -118,9 +118,9 @@ body
             h6.skill-label= props.name
           div.skill-projects
             each p in projects
-              - const link = `https://${p.link}`
+              - const link = `https://${p.link.replace(/https?:\/\//, '')}`
               a.skill-projects-project(href=link target='_blank')
-                span.skill-projects-project-text= p.title
+                span.skill-projects-project-text= p.title.replace(" ", " ")
           div.skill-score
             each n in [1, 2, 3, 4, 5].reverse()
               if n > score
