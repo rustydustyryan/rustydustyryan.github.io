@@ -208,9 +208,13 @@ h2, h3, h4, h5, h6
     width 100%
 
   &-institution
-    font-weight 600
     margin 0
     width 75%
+    &-text
+      @media print
+        font-weight bold
+      @media not print
+        font-weight 600
 
   &-dates
     font-style italic

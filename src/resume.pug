@@ -86,7 +86,8 @@ body
       mixin education(props)
         - const label = formatLabel(props.institution)
         div.education(id=`education.${label}`)
-          h3.education-institution= props.institution
+          h3.education-institution
+            strong.education-institution-text= props.institution
           span.education-dates
             span.education-dates-start= formatDate(props.start)
             span.education-dates-sep= ' – '
