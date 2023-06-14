@@ -95,6 +95,8 @@ body
           span.education-degree= props.degree
           if props.awards
             div.education-awards= props.awards
+          if props.certificate
+            div.education-certificate= "— " + props.certificate
           //- ul.education-summary
           //-   each item in (props.summary || [])
           //-     li.education-summary-item!= item.replace(/ href=/g, ' target="_blank" href=')
