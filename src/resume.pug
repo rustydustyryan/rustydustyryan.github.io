@@ -93,6 +93,8 @@ body
             span.education-dates-sep= ' – '
             span.education-dates-end= formatDate(props.end)
           span.education-degree= props.degree
+          if props.awards
+            div.education-awards= props.awards
           //- ul.education-summary
           //-   each item in (props.summary || [])
           //-     li.education-summary-item!= item.replace(/ href=/g, ' target="_blank" href=')
