@@ -10,7 +10,7 @@ info:
     Developer who creates tools for the web
 
   brief: >
-    Junior Software Developer experienced in website and application design, with a strong understanding of art and design fundementals, and a knack for solving unique problems with creative solutions. Interested in working alone or in a team to develop aesthetically pleasing and highly functional projects.
+    Junior Software Developer experienced in website and application design, with a strong understanding of art and design fundamentals, and a knack for solving unique problems with creative solutions. Interested in working alone or in a team to develop aesthetically pleasing and highly functional projects.
 
 contact:
   website: http://ryandesign.co
@@ -104,35 +104,35 @@ skills:
         - name: HTML
           score: 4
           projects:
-          - title: Praxis Counseling
-            link: praxiscounselingutah.com
-          - title: EdgeLedger
-            link: github.com/rustydustyryan/financial-website
-          - title: NewsGrid
-            link: github.com/rustydustyryan/news-website
-          - title: Hotel BT
-            link: github.com/rustydustyryan/hotel_website
+            - title: Praxis Counseling
+              link: praxiscounselingutah.com
+            - title: EdgeLedger
+              link: github.com/rustydustyryan/financial-website
+            - title: NewsGrid
+              link: github.com/rustydustyryan/news-website
+            - title: Hotel BT
+              link: github.com/rustydustyryan/hotel_website
         - name: CSS
           score: 4
           projects:
-          - title: Dropdown Menu
-            link: github.com/rustydustyryan/Praxis-Dropdown-Menu
-          - title: Hamburger Spin Menu
-            link: github.com/rustydustyryan/hamburger-spin-menu
+            - title: Dropdown Menu
+              link: github.com/rustydustyryan/Praxis-Dropdown-Menu
+            - title: Hamburger Spin Menu
+              link: github.com/rustydustyryan/hamburger-spin-menu
         - name: Bootstrap
           score: 3
         - name: JavaScript/TypeScript
           score: 2
           projects:
-          - title: Music Keeps
-            link: musickeeps.com
-          - title: Ryan Design Co
-            link: ryandesign.co
+            - title: Music Keeps
+              link: musickeeps.com
+            - title: Ryan Design Co
+              link: ryandesign.co
         - name: React
           score: 2
           projects:
-          - title: Ryan Andersen Photography
-            link: ryanimage.com
+            - title: Ryan Andersen Photography
+              link: ryanimage.com
         - name: Shell (zsh)
           score: 1
         - name: Git
@@ -178,7 +178,6 @@ skills:
           score: 5
         - name: Adobe Audition
           score: 1
-
 # recognition:
 #   - flavor: certificate
 #     title: Applied Technology Certificate in 3D Animation
