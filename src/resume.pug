@@ -36,8 +36,11 @@ body
         div.body-header-social: a(href=social[0].url target='_blank')= social[0].label
         div.body-header-social: a(href=social[1].url target='_blank')= social[1].label
       div.body-header-right-left
-        div.body-header-phone= contact.phone
+        div.body-header-social: a(href=social[2].url target='_blank')= 'ryandesign.co'
         div.body-header-email: a(href='mailto:' + contact.email)= contact.email
+      //- div.body-header-right-left
+      //-   div.body-header-phone= contact.phone
+      //-   div.body-header-email: a(href='mailto:' + contact.email)= contact.email
 
   main.body-main: .body-inner
 

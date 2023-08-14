@@ -35,6 +35,11 @@ social:
     user: Ryan Andersen
     url: https://www.linkedin.com/in/ryan-andersen-45907b180/
 
+  - label: website
+    network: Website
+    user: ryandesign.co
+    url: http://ryandesign.co
+
 employment:
   summary: ''
 
@@ -133,6 +138,8 @@ skills:
           projects:
             - title: Ryan Andersen Photography
               link: ryanimage.com
+        - name: WordPress
+          score: 2
         - name: Shell (zsh)
           score: 1
         - name: Git

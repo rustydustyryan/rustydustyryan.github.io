@@ -51,6 +51,7 @@ out/resume.png: out/resume.html out
 
 out/resume.pdf: out/resume.html out
 	@wkhtmltopdf \
+	--no-images \
 	--quiet \
 	--print-media-type \
 	--orientation Portrait \
