@@ -5,23 +5,23 @@ meta:
   version: 0.1.0
 
 info:
-  label: Software Developer
+  label: Web Developer
   description: >
     Developer who creates tools for the web
 
   brief: >
-    Junior Software Developer experienced in website and application design, with a strong understanding of art and design fundamentals, and a knack for solving unique problems with creative solutions. Interested in working alone or in a team to develop aesthetically pleasing and highly functional projects.
+    Web Developer experienced in website and application design, with a strong understanding of art and design, and a knack for solving unique problems with creative solutions. Interested in working alone or with a team to develop aesthetically pleasing and highly functional projects.
 
 contact:
   website: http://ryandesign.co
   phone: +1 (801) 898-9648
-  email: rustydustyryan@gmail.com
+  email: ryanandersen.design@gmail.com
 
 location:
-  address: 468 W 400 N, Apt A
-  city: St George
+  address: 549 S 1300 E
+  city: Salt Lake City
   region: UT
-  code: 84770
+  code: 84102
   country: US
 
 social:
@@ -44,11 +44,11 @@ employment:
   summary: ''
 
   history:
-    - employer: Ryan Andersen Co
+    - employer: Ryan Design Co
       industry: Software, Design
       remote: true
       url: https://www.ryandesign.co/
-      city: St George, UT
+      city: Salt Lake City, UT
       position: Software Developer
       start: 2022-12
       end: present
@@ -62,8 +62,8 @@ employment:
       url: https://www.searsart.com/
       city: St George, UT
       position: Art Director Intern
-      start: 2022-01
-      end: 2023-09
+      start: 2021-05
+      end: 2022-08
       summary:
         - Responsible for handling and cataloging various works of art.
         - Assisted with setting up and hanging prestigious art shows and assisting featured artists.
@@ -127,7 +127,7 @@ skills:
         - name: Bootstrap
           score: 3
         - name: JavaScript/TypeScript
-          score: 2
+          score: 3
           projects:
             - title: Music Keeps
               link: musickeeps.com
@@ -139,11 +139,17 @@ skills:
             - title: Ryan Andersen Photography
               link: ryanimage.com
         - name: WordPress
-          score: 2
+          score: 3
+          projects:
+            - title: Shop Amazingly
+              link: https://shopamazingly.com
         - name: Shell (zsh)
           score: 1
         - name: Git
-          score: 1
+          score: 2
+          projects:
+            - title: Ryan's Github
+              link: https://github.com/rustydustyryan
 
     - name: Design, Photo/Video
       score: 4
@@ -163,9 +169,12 @@ skills:
             - title: Digital Media
               link: https://sportsgeek616.wixsite.com/website-1/image-portfolio
         - name: Illustrator
-          score: 1
+          score: 2
         - name: Lightroom
           score: 4
+          projects:
+            - title: Ryan Andersen Photography
+              link: https://ryanimage.com
         - name: Premiere Pro
           score: 4
         - name: Animate
@@ -183,6 +192,9 @@ skills:
       sets:
         - name: Logic Pro
           score: 5
+          projects:
+            - title: MndBdy Album Release
+              link: https://mndbdymusic.com
         - name: Adobe Audition
           score: 1
 # recognition:

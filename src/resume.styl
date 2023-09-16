@@ -44,10 +44,10 @@ $anchor
   font-weight 400
   text-decoration none
   &, &:visited
-    color var('--primary-color')
+    color var('--primary-color', inherit)
   &:hover
     border-color var('--primary-color-dark')
-    color var('--primary-color-dark')
+    color var('--primary-color-dark', inherit)
 
 a
   @extends $anchor
